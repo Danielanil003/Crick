@@ -5,59 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text-based Cricket Game</title>
     <style>
-        /* CSS styles */
+        /* Body styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Container styles */
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        /* Add more CSS styles as needed */
+
+        /* Heading styles */
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Form styles */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Result box styles */
+        #ballResult, #matchResult {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Hide elements initially */
+        #tossScreen, #battingScreen, #bowlingScreen, #ballResult, #matchResult {
+            display: none;
+        } 
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Text-based Cricket Game</h1>
-        <div id="teamSelection">
-            <h2>Select Teams</h2>
-            <label for="team1">Team 1:</label>
-            <input type="text" id="team1" name="team1"><br><br>
-            <label for="team2">Team 2:</label>
-            <input type="text" id="team2" name="team2"><br><br>
-            <button onclick="startMatch()">Start Match</button>
-        </div>
-        <div id="tossScreen" style="display: none;">
-            <h2>Toss</h2>
-            <p>Choose Heads or Tails:</p>
-            <button onclick="tossResult('heads')">Heads</button>
-            <button onclick="tossResult('tails')">Tails</button>
-        </div>
-        <div id="battingScreen" style="display: none;">
-            <h2>Batting</h2>
-            <p>Striker:</p>
-            <p>Non-Striker:</p>
-            <p>Bowler:</p>
-            <button onclick="rollDice()">Roll the Dice</button>
-        </div>
-        <div id="bowlingScreen" style="display: none;">
-            <h2>Bowling</h2>
-            <p>Bowler:</p>
-            <p>Striker:</p>
-            <p>Non-Striker:</p>
-            <button onclick="rollDice()">Roll the Dice</button>
-        </div>
-        <div id="ballResult" style="display: none;">
-            <h2>Ball Result</h2>
-            <p>Run: </p>
-            <p>Commentary: </p>
-            <button onclick="nextBall()">Next Ball</button>
-        </div>
-        <div id="matchResult" style="display: none;">
-            <h2>Match Result</h2>
-            <p>Winner: </p>
-        </div>
+        <!-- Rest of your HTML content here -->
     </div>
 
     <script>
@@ -80,4 +92,4 @@
         }
     </script>
 </body>
-              </html>
+</html>
